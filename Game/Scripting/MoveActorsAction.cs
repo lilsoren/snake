@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using Unit05.Game.Casting;
-using Unit05.Game.Services;
+using SnakeProgram.Game.Casting;
+using SnakeProgram.Game.Services;
 
 
 
-namespace Unit05.Game.Scripting
+namespace SnakeProgram.Game.Scripting
 {
 
 

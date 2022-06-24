@@ -1,10 +1,10 @@
-﻿using Unit05.Game.Casting;
-using Unit05.Game.Directing;
-using Unit05.Game.Scripting;
-using Unit05.Game.Services;
+﻿using SnakeProgram.Game.Casting;
+using SnakeProgram.Game.Directing;
+using SnakeProgram.Game.Scripting;
+using SnakeProgram.Game.Services;
 
 
-namespace Unit05
+namespace SnakeProgram
 {
     /// <summary>
     /// The program's entry point.
@@ -21,7 +21,8 @@ namespace Unit05
             Cast cast = new Cast();
             cast.AddActor("food", new Food());
             cast.AddActor("snake", new Snake());
-            cast.AddActor("score", new Score());
+            cast.AddActor("score", new Score(0, "1"));
+            cast.AddActor("score", new Score(700, "2"));
 
             // create the services
             KeyboardService keyboardService = new KeyboardService();

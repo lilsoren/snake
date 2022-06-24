@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using Unit05.Game.Casting;
-using Unit05.Game.Services;
+using SnakeProgram.Game.Casting;
+using SnakeProgram.Game.Services;
 
 
-namespace Unit05.Game.Scripting
+namespace SnakeProgram.Game.Scripting
 {
     /// <summary>
     /// <para>An output action that draws all the actors.</para>
@@ -26,13 +26,13 @@ namespace Unit05.Game.Scripting
         {
             Snake snake = (Snake)cast.GetFirstActor("snake");
             List<Actor> segments = snake.GetSegments();
-            Actor score = cast.GetFirstActor("score");
+            List<Actor> scores = cast.GetActors("score");
             Actor food = cast.GetFirstActor("food");
             List<Actor> messages = cast.GetActors("messages");
             
             videoService.ClearBuffer();
             videoService.DrawActors(segments);
-            videoService.DrawActor(score);
+            videoService.DrawActors(scores);
             videoService.DrawActor(food);
             videoService.DrawActors(messages);
             videoService.FlushBuffer();

@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using Unit05.Game.Casting;
-using Unit05.Game.Services;
+using SnakeProgram.Game.Casting;
+using SnakeProgram.Game.Services;
 
 
-namespace Unit05.Game.Scripting
+namespace SnakeProgram.Game.Scripting
 {
     /// <summary>
     /// <para>An update action that handles interactions between the actors.</para>

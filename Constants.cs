@@ -1,8 +1,8 @@
 using System;
 using Microsoft.VisualBasic;
-using Unit05.Game.Casting;
+using SnakeProgram.Game.Casting;
 
-namespace Unit05.Game
+namespace SnakeProgram.Game
 {
     /// <summary>
     /// <para>A tasty item that snakes like to eat.</para>

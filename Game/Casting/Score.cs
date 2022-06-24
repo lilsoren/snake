@@ -1,7 +1,7 @@
 using System;
 
 
-namespace Unit05.Game.Casting
+namespace SnakeProgram.Game.Casting
 {
     /// <summary>
     /// <para>A tasty item that snakes like to eat.</para>
@@ -12,14 +12,18 @@ namespace Unit05.Game.Casting
     public class Score : Actor
     {
         private int points = 0;
+        private string player = null;
 
         /// <summary>
         /// Constructs a new instance of an Food.
         /// </summary>
-        public Score()
+        public Score(int x, string player) : base()
         {
+            this.player = player;
             AddPoints(0);
+            this.SetPosition(new Point(x, 0));
         }
+        
 
         /// <summary>
         /// Adds the given points to the score.
@@ -28,7 +32,7 @@ namespace Unit05.Game.Casting
         public void AddPoints(int points)
         {
             this.points += points;
-            SetText($"Score: {this.points}");
+            SetText($"Player {player} Score: {this.points}");
         }
     }
 }

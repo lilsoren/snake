@@ -1,7 +1,7 @@
 using System;
 
 
-namespace Unit05.Game.Casting
+namespace SnakeProgram.Game.Casting
 {
     /// <summary>
     /// <para>A tasty item that snakes like to eat.</para>
