@@ -12,7 +12,10 @@ namespace SnakeProgram.Game.Casting
     public class Score : Actor
     {
         private int points = 0;
-        private string player = null;
+        public string player{
+            get;
+            private set;
+        }
 
         /// <summary>
         /// Constructs a new instance of an Food.
