@@ -55,6 +55,7 @@ namespace SnakeProgram.Game.Directing
             {
                 action.Execute(cast, script);
             }
+            
         }
     }
 }

@@ -10,7 +10,7 @@ namespace SnakeProgram.Game.Casting
     /// </summary>
     public class Snake : Actor
     {
-        private List<Actor> segments = new List<Actor>();
+        public List<Actor> segments = new List<Actor>();
 
         /// <summary>
         /// Constructs a new instance of a Snake.
@@ -51,7 +51,7 @@ namespace SnakeProgram.Game.Casting
         /// Grows the snake's tail by the given number of segments.
         /// </summary>
         /// <param name="numberOfSegments">The number of segments to grow.</param>
-        public void GrowTail(int numberOfSegments)
+        public virtual void GrowTail(int numberOfSegments)
         {
             for (int i = 0; i < numberOfSegments; i++)
             {
@@ -64,7 +64,7 @@ namespace SnakeProgram.Game.Casting
                 segment.SetPosition(position);
                 segment.SetVelocity(velocity);
                 segment.SetText("#");
-                segment.SetColor(Constants.GREEN);
+                segment.SetColor(Constants.WHITE);
                 segments.Add(segment);
             }
         }
@@ -98,7 +98,7 @@ namespace SnakeProgram.Game.Casting
         /// <summary>
         /// Prepares the snake body for moving.
         /// </summary>
-        private void PrepareBody()
+        public virtual void PrepareBody()
         {
             int x = Constants.MAX_X / 2;
             int y = Constants.MAX_Y / 2;
@@ -108,7 +108,7 @@ namespace SnakeProgram.Game.Casting
                 Point position = new Point(x - i * Constants.CELL_SIZE, y);
                 Point velocity = new Point(1 * Constants.CELL_SIZE, 0);
                 string text = i == 0 ? "8" : "#";
-                Color color = i == 0 ? Constants.YELLOW : Constants.GREEN;
+                Color color = i == 0 ? Constants.WHITE : Constants.WHITE;
 
                 Actor segment = new Actor();
                 segment.SetPosition(position);

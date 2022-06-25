@@ -20,9 +20,10 @@ namespace SnakeProgram
             // create the cast
             Cast cast = new Cast();
             cast.AddActor("food", new Food());
-            cast.AddActor("snake", new Snake());
-            cast.AddActor("score", new Score(0, "1"));
-            cast.AddActor("score", new Score(700, "2"));
+            cast.AddActor("player1", new Player1());
+            cast.AddActor("player2", new Player2());
+            // cast.AddActor("score", new Score(0, "1"));
+            // cast.AddActor("score", new Score(700, "2"));
 
             // create the services
             KeyboardService keyboardService = new KeyboardService();

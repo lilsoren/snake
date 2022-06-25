@@ -37,6 +37,15 @@ namespace SnakeProgram.Game.Scripting
             }
         }
 
+        
+        public void Execute2(Cast cast, Script script)
+        {
+            foreach (Actor a in cast.GetAllActors())
+            {
+                a.MoveNext();
+            }
+        }
+
     }
 
     /// <summary>
