@@ -23,8 +23,14 @@ namespace SnakeProgram.Game.Casting
         public Score(int x, string player) : base()
         {
             this.player = player;
-            AddPoints(0);
+            SetText($"Player {player}");
             this.SetPosition(new Point(x, 0));
+            this.SetColor(player == "1" ? Constants.GREEN : Constants.RED);
+        }
+
+        public void setWinner(bool isWinner)
+        {
+           SetText($"Player {player} " + (isWinner?"won":"lost"));
         }
         
 

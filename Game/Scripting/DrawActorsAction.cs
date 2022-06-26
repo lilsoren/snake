@@ -29,12 +29,16 @@ namespace SnakeProgram.Game.Scripting
             Snake player2 = (Player2)cast.GetFirstActor("player2");
             List<Actor> segments2 = player2.GetSegments();
             List<Actor> messages = cast.GetActors("messages");
+            List<Actor> scores = cast.GetActors("score");
+
             
             videoService.ClearBuffer();
             videoService.DrawActors(segments1);
             videoService.DrawActors(segments2);
             videoService.DrawActors(messages);
+            videoService.DrawActors(scores);
             videoService.FlushBuffer();
+            
         }
     }
 }

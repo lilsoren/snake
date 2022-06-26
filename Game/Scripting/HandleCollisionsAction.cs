@@ -56,12 +56,15 @@ namespace SnakeProgram.Game.Scripting
             Actor head2 = snake2.GetHead();
             List<Actor> body1 = snake1.GetBody();
             List<Actor> body2 = snake2.GetBody();
+            List<Actor> scores = cast.GetActors("score");
 
             foreach (Actor segment in body1)
             {
                 if (segment.GetPosition().Equals(head2.GetPosition()))
                 {
                     isGameOver = true;
+                    ((Score)scores.Find(s => ((Score)s).player == "1")).setWinner(true);
+                    ((Score)scores.Find(s => ((Score)s).player == "2")).setWinner(false);
                 }
             }
             foreach (Actor segment in body2)
@@ -69,6 +72,8 @@ namespace SnakeProgram.Game.Scripting
                 if (segment.GetPosition().Equals(head1.GetPosition()))
                 {
                     isGameOver = true;
+                    ((Score)scores.Find(s => ((Score)s).player == "1")).setWinner(false);
+                    ((Score)scores.Find(s => ((Score)s).player == "2")).setWinner(true);
                 }
             }
         }
